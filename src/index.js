@@ -1,7 +1,6 @@
 // import dependecies yang dibutuhkan
 
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const praktikum = require("./routes/praktikumRoutes")
