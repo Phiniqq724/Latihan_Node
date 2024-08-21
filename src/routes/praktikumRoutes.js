@@ -7,6 +7,7 @@ const praktikumControllers = require("../controllers/praktikumController");
 
 // ENDPOINT PROFILE
 app.get("/profile/:name/:age", praktikumControllers.profile);
+app.get("/identitas", praktikumControllers.identitas);
 app.post("/profile", praktikumControllers.profile);
 
 module.exports = app;

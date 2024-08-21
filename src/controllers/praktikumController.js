@@ -9,3 +9,14 @@ exports.profile = (req, res) => {
 
     return res.json(response)
 }
+exports.identitas = (req, res) => {
+    let nama = req.query.nama
+    let kelas = req.query.kelas
+
+    let response = {
+        nama: nama,
+        kelas: kelas
+    }
+
+    return res.json(response)
+}
