@@ -6,12 +6,12 @@ app.use(express.json());
 const penilaianThirdControllers = require("../controllers/penilaianThirdController");
 
 // ENDPOINT DECIMAL
-app.get("/decimal/:number", penilaianThirdControllers.decimal);
+app.get("/decimal", penilaianThirdControllers.decimal);
 // ENDPOINT OCTAL
-app.get("/octal/:number", penilaianThirdControllers.octal);
+app.get("/octal", penilaianThirdControllers.octal);
 // ENDPOINT HEXA
-app.get("/hexa/:number", penilaianThirdControllers.hexa);
+app.get("/hexa", penilaianThirdControllers.hexa);
 // ENDPOINT BINARY
-app.get("/binary/:number", penilaianThirdControllers.binary);
+app.get("/binary", penilaianThirdControllers.binary);
 
 module.exports = app;

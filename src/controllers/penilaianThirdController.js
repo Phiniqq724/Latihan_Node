@@ -1,5 +1,5 @@
 exports.decimal = (req, res) => {
-    let number = Number(req.params.number)
+    let number = Number(req.query.number)
     let octal = number.toString(8)
     let hexa = number.toString(16)
     let binary = number.toString(2)
@@ -15,7 +15,7 @@ exports.decimal = (req, res) => {
     return res.json(response)
 }
 exports.octal = (req, res) => {
-    let number = Number(req.params.number)
+    let number = Number(req.query.number)
     let decimal = parseInt(number, 8)
     let hexa = decimal.toString(16)
     let binary = decimal.toString(2)
@@ -31,7 +31,7 @@ exports.octal = (req, res) => {
     return res.json(response)
 }
 exports.hexa = (req, res) => {
-    let number = req.params.number
+    let number = req.query.number
     let decimal = parseInt(number, 16)
     let octal = decimal.toString(8)
     let binary = decimal.toString(2)
@@ -47,7 +47,7 @@ exports.hexa = (req, res) => {
     return res.json(response)
 }
 exports.binary = (req, res) => {
-    let number = req.params.number
+    let number = req.query.number
     let decimal = parseInt(number, 2)
     let octal = decimal.toString(8)
     let hexa = decimal.toString(16)

@@ -7,7 +7,7 @@ const praktikum = require("./routes/praktikumRoutes")
 const first = require("./routes/penilaianFirstRoutes")
 const sec = require("./routes/penilaianSecRoutes")
 const third = require("./routes/penilaianThirdRoutes")
-const empat = require("./routes/penilaianFourthRoutes")
+const fourth = require("./routes/penilaianFourthRoutes")
 
 const app = express()
 
@@ -42,7 +42,7 @@ app.get("/test", (req, res) => {
 app.use(`/first`, first)
 app.use(`/sec`, sec)
 app.use(`/third`, third)
-app.use(`/empat`, empat)
+app.use(`/fourth`, fourth)
 
 app.use(`/praktikum`, praktikum)
 
