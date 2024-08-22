@@ -4,6 +4,10 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const praktikum = require("./routes/praktikumRoutes")
+const first = require("./routes/penilaianFirstRoutes")
+const sec = require("./routes/penilaianSecRoutes")
+const third = require("./routes/penilaianThirdRoutes")
+const empat = require("./routes/penilaianFourthRoutes")
 
 const app = express()
 
@@ -18,6 +22,9 @@ const port = process.env.PORT
 // penggunaan cors agar end point dapat diakses oleh cross platform
 app.use(cors())
 
+app.use(express.json())
+
+
 // endpoint "/test" dengan method GET
 app.get("/test", (req, res) => {
     // req merupakan variabel yang berisi data request
@@ -31,6 +38,11 @@ app.get("/test", (req, res) => {
     // memberikan response dengan format JSON yang berisi objek di atas
     res.json(response)
 })
+
+app.use(`/first`, first)
+app.use(`/sec`, sec)
+app.use(`/third`, third)
+app.use(`/empat`, empat)
 
 app.use(`/praktikum`, praktikum)
 
